@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelX - Packages & Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">TravelX</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="main.html">Packages</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div>
+      <button onclick="window.location.href='login.html'">Login</button>
+      <button onclick="window.location.href='register.html'">Register</button>
+    </div>
+  </nav>
+
+  <!-- Booking Section -->
+  <section class="section booking-container">
+    <div class="image">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Travel">
+    </div>
+    <div class="form">
+      <form id="bookingForm" onsubmit="bookNow('bookingForm'); return false;">
+        <label>Where To:</label>
+        <select required>
+          <option value="">Select Destination</option>
+          <option value="France">France</option>
+          <option value="India">India</option>
+          <option value="Germany">Germany</option>
+        </select>
+
+        <label>How Many Persons:</label>
+        <input type="number" min="1" required>
+
+        <label>Start Date:</label>
+        <input type="date" required>
+
+        <label>End Date:</label>
+        <input type="date" required>
+
+        <label>Description:</label>
+        <textarea minlength="50" maxlength="500" required></textarea>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="section">
+    <h2>Our Popular Packages</h2>
+    <div class="package-grid">
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="France">
+        <div class="content">
+          <h3>France</h3>
+          <p>Explore Paris, Eiffel Tower & More.</p>
+          <p>$1500 | ⭐ 4.5</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="Germany">
+        <div class="content">
+          <h3>Germany</h3>
+          <p>Historic castles & beer festivals!</p>
+          <p>$1300 | ⭐ 4.6</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="package-card">
+        <img src="https://images.unsplash.com/photo-1549887534-4e2874bd01f6" alt="India">
+        <div class="content">
+          <h3>India</h3>
+          <p>Taj Mahal, Kerala backwaters & more.</p>
+          <p>$1000 | ⭐ 4.7</p>
+          <button>Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h4>Affordable Hotels</h4>
+        <p>Stay in quality hotels without breaking the bank.</p>
+      </div>
+      <div class="service-card">
+        <h4>Food & Drinks</h4>
+        <p>Experience local cuisines and drinks at each destination.</p>
+      </div>
+      <div class="service-card">
+        <h4>Safety Guide</h4>
+        <p>24/7 support and safety instructions for travelers.</p>
+      </div>
+      <div class="service-card">
+        <h4>Private Tours</h4>
+        <p>Customized private tours for individuals or groups.</p>
+      </div>
+      <div class="service-card">
+        <h4>Travel Insurance</h4>
+        <p>Comprehensive coverage for peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <h4>Adventure Activities</h4>
+        <p>Exciting adventures like trekking, scuba diving, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

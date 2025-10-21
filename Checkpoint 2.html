@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkpoint 2 - TravelX Main Sections</title>
+  <style>
+    *{margin:0; padding:0; box-sizing:border-box; font-family:Poppins,sans-serif;}
+    body{background:#f4f8fb; padding-top:50px;}
+
+    .section{padding:60px 5%;}
+
+    /* Booking Section */
+    .booking-container{display:flex; flex-wrap:wrap; gap:30px; align-items:center;}
+    .booking-container > div{flex:1; min-width:300px;}
+    .booking-container img{width:100%; border-radius:10px;}
+    .booking-form{background:white; padding:30px; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+    .booking-form h2{margin-bottom:20px;}
+    .booking-form label{margin-top:10px; display:block;}
+    .booking-form input, .booking-form select, .booking-form textarea{width:100%; margin-top:5px; padding:10px; border-radius:5px; border:1px solid #ccc;}
+    .booking-form button{margin-top:20px; width:100%; padding:12px; background:#00bfff; border:none; border-radius:25px; color:white; font-size:16px; cursor:pointer;}
+    .booking-form button:hover{background:#008ccc;}
+
+    /* Packages */
+    .package-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
+    .card{background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center;}
+    .card img{width:100%; height:180px; object-fit:cover;}
+    .card h3{margin:10px 0;}
+    .card p{padding:0 10px 10px;}
+    .card button{margin-bottom:15px; padding:8px 20px; border:none; background:#1e90ff; color:white; border-radius:5px; cursor:pointer;}
+    .card button:hover{background:#0a3d62;}
+
+    /* Services */
+    .service-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
+    .service-box{padding:20px; border-radius:10px; background:#f0f0f0; text-align:center; font-weight:600;}
+    .service-box:hover{background:#1e90ff; color:white;}
+  </style>
+</head>
+<body>
+
+  <!-- Booking Section -->
+  <section class="section booking-section">
+    <div class="booking-container">
+      <div class="booking-image">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Travel Image">
+      </div>
+      <div class="booking-form">
+        <h2>Book Your Dream Trip</h2>
+        <form id="bookingForm">
+          <label for="where">Where To:</label>
+          <select id="where" required>
+            <option value="">Select Destination</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Australia</option>
+          </select>
+
+          <label for="persons">How Many Persons:</label>
+          <input type="number" id="persons" min="1" required>
+
+          <label for="start">Start Date:</label>
+          <input type="date" id="start" required>
+
+          <label for="end">End Date:</label>
+          <input type="date" id="end" required>
+
+          <label for="desc">Description:</label>
+          <textarea id="desc" minlength="50" maxlength="500" required></textarea>
+
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section class="section packages">
+    <h2>Our Popular Packages</h2>
+    <div class="package-grid">
+      <div class="card"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34"><h3>France</h3><p>Explore Paris, Eiffel Tower & More.</p><p><strong>$1500</strong> | ⭐4.5</p><button>Book Now</button></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff"><h3>Germany</h3><p>Historic castles & beer festivals!</p><p><strong>$1300</strong> | ⭐4.6</p><button>Book Now</button></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1551888419-7cdb884c8c73"><h3>India</h3><p>Taj Mahal & colorful culture.</p><p><strong>$1200</strong> | ⭐4.8</p><button>Book Now</button></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"><h3>United States</h3><p>
