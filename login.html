@@ -17,7 +17,7 @@
         <input type="email" id="loginEmail" placeholder="admin@travelx.com" required>
         <label>Password:</label>
         <input type="password" id="loginPassword" placeholder="admin" required>
-        <button id="loginButton">Login</button>
+        <button type="submit" id="loginButton">Login</button>
       </form>
       <p style="margin-top:10px; text-align:center;">
         Don't have an account? <a href="register.html">Register here</a>
@@ -27,28 +27,28 @@
 </section>
 
 <script>
-  // Ensure DOM is loaded
-  window.onload = function() {
-    const loginButton = document.getElementById("loginButton");
-    loginButton.addEventListener("click", function(e) {
-      e.preventDefault(); // Prevent form submission
+document.addEventListener("DOMContentLoaded", function() {
+  const loginForm = document.getElementById("loginForm");
 
-      const email = document.getElementById("loginEmail").value.trim();
-      const pass = document.getElementById("loginPassword").value.trim();
+  loginForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent form submission
 
-      if (!email || !pass) {
-        alert("Please fill all fields.");
-        return;
-      }
+    const email = document.getElementById("loginEmail").value.trim();
+    const pass = document.getElementById("loginPassword").value.trim();
 
-      if(email === "admin@travelx.com" && pass === "admin") {
-        alert("Login Successful!");
-        window.location.href = "dashboard.html"; // Redirect
-      } else {
-        alert("Invalid email or password");
-      }
-    });
-  };
+    if (!email || !pass) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    if(email === "admin@travelx.com" && pass === "admin") {
+      alert("Login Successful!");
+      window.location.href = "dashboard.html"; // Redirect
+    } else {
+      alert("Invalid email or password");
+    }
+  });
+});
 </script>
 
 </body>

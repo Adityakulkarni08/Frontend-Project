@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Dashboard - TravelX</title>
+  <meta charset="UTF-8">
+  <title>Dashboard - TravelX</title>
+  <style>
+    /* Set a gradient background */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Style the welcome box */
+    .welcome-box {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 60px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2575fc;
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background-color: #2575fc;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-<h2>Welcome, admin!</h2>
-<p>You have successfully logged in.</p>
-<a href="login.html">Logout</a>
+  <div class="welcome-box">
+    <h2>Welcome, Admin!</h2>
+    <p>You have successfully logged in to TravelX Dashboard.</p>
+    <a href="login.html">Logout</a>
+  </div>
 </body>
 </html>
